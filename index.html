@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет-магазин художника</title>
+  <style>
+    /* Сброс стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* Хедер с ярким градиентом и уменьшенным заголовком */
+    header {
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 2em; /* уменьшенный размер заголовка */
+      margin-bottom: 5px;
+    }
+    header p {
+      font-size: 1em;
+    }
+    /* Яркое меню */
+    nav {
+      background: #ff6f61;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      padding: 10px 15px;
+      display: block;
+    }
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+    /* Контейнер для основного контента */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    /* Секция с продуктами */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .product-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product-item img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .product-item h3 {
+      margin: 10px 0;
+    }
+    .product-item p {
+      font-size: 0.95em;
+    }
+    .product-item button {
+      padding: 10px 20px;
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product-item button:hover {
+      background: #ff8a80;
+    }
+    /* Футер */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Добро пожаловать</h1>
+    <p>Интернет-магазин произведений искусства</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Магазин</a></li>
+      <li><a href="#">Галерея</a></li>
+      <li><a href="#">О художнике</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <!-- Секция с продуктами -->
+    <section class="products">
+      <div class="product-item">
+        <img src="art1.jpg" alt="Произведение 1">
+        <h3>Произведение 1</h3>
+        <p>Краткое описание, материалы, размеры.</p>
+        <button>Купить</button>
+      </div>
+      <div class="product-item">
+        <img src="art2.jpg" alt="Произведение 2">
+        <h3>Произведение 2</h3>
+        <p>Краткое описание, материалы, размеры.</p>
+        <button>Купить</button>
+      </div>
+      <!-- Дополнительные карточки товаров -->
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Интернет-магазин художника. Все права защищены.</p>
+  </footer>
+</body>
+</html>
