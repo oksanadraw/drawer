@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Интернет-магазин художника</title>
+  <title>Главная страница художника</title>
   <style>
     /* Сброс стилей */
     * {
@@ -11,144 +11,156 @@
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff;
+      background: #f4f4f4;
       color: #333;
       line-height: 1.6;
     }
-    /* Хедер с ярким градиентом и уменьшенным заголовком */
+    
+    /* Верхний заголовок */
     header {
-      background: linear-gradient(135deg, #f6d365, #fda085);
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      background: #222;
       color: #fff;
-      text-align: center;
       padding: 20px;
+      text-align: center;
     }
-    header h1 {
-      font-size: 2em; /* уменьшенный размер заголовка */
-      margin-bottom: 5px;
+    
+    /* Горизонтальное меню */
+    nav.horizontal {
+      background: #444;
     }
-    header p {
-      font-size: 1em;
-    }
-    /* Яркое меню */
-    nav {
-      background: #ff6f61;
-    }
-    nav ul {
+    nav.horizontal ul {
       list-style: none;
       display: flex;
       justify-content: center;
     }
-    nav ul li {
+    nav.horizontal ul li {
       margin: 0 15px;
     }
-    nav ul li a {
-      color: #fff;
+    nav.horizontal ul li a {
       text-decoration: none;
-      font-size: 1.1em;
-      padding: 10px 15px;
-      display: block;
-    }
-    nav ul li a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
-    }
-    /* Контейнер для основного контента */
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    /* Секция с продуктами */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .product-item {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 15px;
-      text-align: center;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .product-item img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    .product-item h3 {
-      margin: 10px 0;
-    }
-    .product-item p {
-      font-size: 0.95em;
-    }
-    .product-item button {
-      padding: 10px 20px;
-      background: #ff6f61;
       color: #fff;
-      border: none;
+      padding: 10px 15px;
+      transition: background 0.3s;
+    }
+    nav.horizontal ul li a:hover {
+      background: #666;
+    }
+    
+    /* Контейнер для бокового меню и основного контента */
+    .container {
+      display: flex;
+    }
+    
+    /* Вертикальное меню */
+    aside.vertical-menu {
+      width: 200px;
+      background: #333;
+      min-height: calc(100vh - 80px); /* вычет высоты header и horizontal nav */
+    }
+    aside.vertical-menu ul {
+      list-style: none;
+    }
+    aside.vertical-menu ul li {
+      border-bottom: 1px solid #444;
+    }
+    aside.vertical-menu ul li a {
+      display: block;
+      color: #fff;
+      padding: 15px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    aside.vertical-menu ul li a:hover {
+      background: #555;
+    }
+    
+    /* Основное содержимое */
+    main.content {
+      flex: 1;
+      padding: 20px;
+    }
+    /* Геро-блок */
+    .hero {
+      background: url('artist-hero.jpg') no-repeat center center/cover;
+      height: 300px;
+      margin-bottom: 20px;
       border-radius: 5px;
-      cursor: pointer;
     }
-    .product-item button:hover {
-      background: #ff8a80;
+    
+    /* Пример секции с информацией */
+    section.about {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    
     /* Футер */
     footer {
-      background: #333;
+      background: #222;
       color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 10px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Верхний заголовок -->
   <header>
-    <h1>Добро пожаловать</h1>
-    <p>Интернет-магазин произведений искусства</p>
+    <h1>Оксана Азарова </h1>
   </header>
   
-  <nav>
+  <!-- Горизонтальное меню -->
+  <nav class="horizontal">
     <ul>
-      <li><a href="#">Главная</a></li>
-      <li><a href="#">Магазин</a></li>
-      <li><a href="gallery.html">Галерея</a></li>
-      <li><a href="#">О художнике</a></li>
-      <li><a href="#">Контакты</a></li>
+      <li><a href="#">Интернет-магазин</a></li>
+      <li><a href="gallery.html">Галерея работ</a></li>
     </ul>
   </nav>
   
   <div class="container">
-    <!-- Секция с продуктами -->
-    <section class="products">
-      <div class="product-item">
-        <img src="mel.jpg" alt="Произведение 1">
-        <h3>Произведение 1</h3>
-        <p>Краткое описание, материалы, размеры.</p>
-        <button>Купить</button>
-      </div>
-      <div class="product-item">
-        <img src="art2.jpg" alt="Произведение 2">
-        <h3>Произведение 2</h3>
-        <p>Краткое описание, материалы, размеры.</p>
-        <button>Купить</button>
-      </div>
-      <!-- Дополнительные карточки товаров -->
-    </section>
+    <!-- Вертикальное меню -->
+    <aside class="vertical-menu">
+      <ul>
+        <li><a href="you.html">О художнике</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+        <li><a href= "news.html">Новости</a></li>
+      </ul>
+    </aside>
+    
+    <!-- Основное содержимое -->
+    <main class="content">
+      <div class="hero"></div>
+      <section class="about">
+        <h2>Добро пожаловать!</h2>
+        <p>
+          Пресс‑релиз
+
+Оксана Азарова: Традиции Строгановского мастерства и современная экспрессия в каждой работе
+
+Художница Оксана Азарова, выпускница знаменитого МГХПА им. С.Г. Строганова факультета дпо, продолжает удивлять мир искусства своим уникальным подходом, объединяющим классические традиции с современными экспериментами.
+
+Окончив обучение в МГХПА им. С.Г. Строганова, Оксана получила прочную базу в классическом изобразительном искусстве, что позволило ей развить индивидуальный стиль и осваивать новые творческие горизонты. Сегодня она уверенно работает в различных техниках – от классической живописи до смешанных техник, используя экспериментальные методы, которые раскрывают глубину и многогранность её видения.
+
+В её работах ощущается живость и динамика, каждая картина становится диалогом между традиционными приемами и современными формами самовыражения. Благодаря богатому образованию и стремлению к постоянному развитию, творчество Оксаны Азаровой выделяется своей экспрессивностью, гармонией цвета и композиции, а также способностью затрагивать самые актуальные темы современности.
+
+Художница активно участвует в выставках , где её работы получают высокую оценку  ценителей искусства. Её творческий путь – это постоянное стремление к эксперименту и поиску новых решений, что делает её вклад в современное искусство особенно значимым.
+
+Каждая выставка станет уникальной площадкой для диалога между традиционными художественными формами и новаторскими подходами, позволяющими раскрыть многогранность творчества художницы
+        </p>
+      </section>
+    </main>
   </div>
   
+  <!-- Футер -->
   <footer>
-    <p>&copy; 2025 Интернет-магазин художника. Все права защищены.</p>
+    <p>© 2025 Художник. Все права защищены.</p>
   </footer>
+
 </body>
 </html>
