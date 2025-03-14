@@ -23,13 +23,13 @@
     header {
       background: #222;
       color: #fff;
-      padding: 10px; /* уменьшен отступ */
+      padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     header .logo {
-      width: 50px; /* можно настроить размер логотипа */
+      width: 50px;
       height: auto;
       margin-right: 10px;
     }
@@ -68,7 +68,7 @@
     aside.vertical-menu {
       width: 200px;
       background: #333;
-      min-height: calc(100vh - 80px); /* вычет высоты header и horizontal nav */
+      min-height: calc(100vh - 80px);
     }
     aside.vertical-menu ul {
       list-style: none;
@@ -100,12 +100,21 @@
       border-radius: 5px;
     }
     
-    /* Пример секции с информацией */
+    /* Секция с информацией */
     section.about {
       background: #fff;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden; /* для корректного обтекания */
+    }
+    /* Стили для фото с обтеканием текста */
+    .profile-photo {
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      width: 200px; /* можно изменить размер по необходимости */
+      border-radius: 5px;
     }
     
     /* Футер */
@@ -122,7 +131,7 @@
 
   <!-- Верхний заголовок с логотипом -->
   <header>
-    <img src="logo.webp" alt="Логотип" class="logo">
+    <img src="logo.png" alt="Логотип" class="logo">
     <h1>Оксана Азарова</h1>
   </header>
   
@@ -148,9 +157,11 @@
     <main class="content">
       <div class="hero"></div>
       <section class="about">
+        <!-- Мое фото с обтеканием текста -->
+        <img src="myphoto.jpg" alt="Мое фото" class="profile-photo">
         <h2>Добро пожаловать!</h2>
         <p>
-       
+          Пресс‑релиз
           <br><br>
           Художница Оксана Азарова, выпускница знаменитого МГХПА им. С.Г. Строганова факультета дпо, продолжает удивлять мир искусства своим уникальным подходом, объединяющим классические традиции с современными экспериментами.
           <br><br>
@@ -173,3 +184,6 @@
 
 </body>
 </html>
+  
+    
+
