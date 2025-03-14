@@ -11,12 +11,66 @@
       padding: 0;
     }
     header {
-      background-color: #333;
+      background-color: #800080; /* Фиолетовый */
       color: #fff;
       padding: 20px;
       text-align: center;
     }
+    footer {
+      background-color: #800080; /* Фиолетовый */
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    /* Горизонтальное меню */
+    .horizontal-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .horizontal-menu li {
+      margin: 0 15px;
+    }
+    .horizontal-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .horizontal-menu a:hover {
+      text-decoration: underline;
+    }
+    /* Разметка для вертикального меню и галереи */
+    .content-wrapper {
+      display: flex;
+    }
+    /* Вертикальное меню */
+    .vertical-menu {
+      width: 200px;
+      background-color: #f3e5f5; /* Светло-фиолетовый */
+      padding: 15px;
+    }
+    .vertical-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .vertical-menu li {
+      margin-bottom: 10px;
+    }
+    .vertical-menu a {
+      text-decoration: none;
+      color: #800080;
+      font-weight: bold;
+    }
+    .vertical-menu a:hover {
+      color: #5e005e;
+    }
+    /* Галерея */
     .gallery {
+      flex: 1;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
@@ -31,28 +85,38 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
   <header>
     <h1>Галерея</h1>
+    <nav class="horizontal-menu">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Галерея</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
   
   <main>
-    <div class="gallery">
-      <img src="mel.jpg/300x200" alt="Изображение 1">
-      <img src="nat.jpg/300x200" alt="Изображение 2">
-      <img src="https://"lodka.gif"/300x200" alt="Изображение 3">
-      <img src="https://via.placeholder.com/300x200" alt="Изображение 4">
-      <img src="https://via.placeholder.com/300x200" alt="Изображение 5">
-      <img src="https://via.placeholder.com/300x200" alt="Изображение 6">
+    <div class="content-wrapper">
+      <nav class="vertical-menu">
+        <ul>
+          <li><a href="#">Ссылка 1</a></li>
+          <li><a href="#">Ссылка 2</a></li>
+          <li><a href="#">Ссылка 3</a></li>
+        </ul>
+      </nav>
+      <div class="gallery">
+        <img src="mel.jpg" alt="Изображение 1">
+        <img src="nat.jpg" alt="Изображение 2">
+        <img src="lodka.gif" alt="Изображение 3">
+        <img src="https://via.placeholder.com/300x200" alt="Изображение 4">
+        <img src="https://via.placeholder.com/300x200" alt="Изображение 5">
+        <img src="https://via.placeholder.com/300x200" alt="Изображение 6">
+      </div>
     </div>
   </main>
   
