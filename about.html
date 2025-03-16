@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница художника</title>
+  <style>
+    /* Сброс базовых стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    /* Основной контейнер с двумя колонками */
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    /* Стили для вертикального меню (боковая панель) */
+    .sidebar {
+      width: 250px;
+      background: linear-gradient(45deg, #ff6b6b, #f06595);
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      max-width: 100%;
+      height: auto;
+    }
+    .menu {
+      list-style: none;
+    }
+    .menu li {
+      margin: 15px 0;
+    }
+    .menu li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .menu li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    /* Стили для основной области контента */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background: #f8f9fa;
+    }
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #f06595;
+    }
+    .content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Боковая панель с логотипом и вертикальным меню -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="logo.png" alt="Логотип художника">
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="shop.html">Интернет‑магазин</a></li>
+      </ul>
+    </div>
+    <!-- Основная область контента -->
+    <div class="content">
+      <h1>О художнике</h1>
+      <p>Добро пожаловать на яркую страницу художника! Здесь вы познакомитесь с творчеством, узнаете историю создания работ и откроете для себя уникальный мир искусства.</p>
+      <p>Исследуйте разделы сайта, чтобы увидеть галерею работ, узнать последние новости и приобрести оригинальные произведения в интернет‑магазине.</p>
+    </div>
+  </div>
+</body>
+</html>
