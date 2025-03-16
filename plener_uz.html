@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пленэр</title>
+  <style>
+    /* Сброс базовых стилей */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Фон всей страницы – яркий градиент */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    }
+    /* Контейнер для бокового меню и контента */
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    /* Вертикальное меню (боковая панель) */
+    .sidebar {
+      width: 250px;
+      background: linear-gradient(180deg, #00c6ff, #0072ff);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sidebar ul {
+      list-style: none;
+      width: 100%;
+    }
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+    .sidebar ul li a {
+      display: block;
+      padding: 10px 15px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 8px;
+      text-align: center;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .sidebar ul li a:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
+    /* Основной контент */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    }
+    .content h1 {
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .content p {
+      font-size: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Вертикальное меню -->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="shop.html">Интернет‑магазин</a></li>
+      </ul>
+    </div>
+    <!-- Основной контент страницы -->
+    <div class="content">
+      <h1>Пленэр</h1>
+      <p>Добро пожаловать на нашу яркую страницу, посвящённую пленэру! Здесь вы можете насладиться красотой природы, вдохновиться атмосферой творчества и открыть для себя мир живописи на свежем воздухе.</p>
+    </div>
+  </div>
+</body>
+</html>
