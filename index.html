@@ -176,6 +176,16 @@
     <img src="vis_8.JPG" alt="Работа 5">
   </div>
 </div>
+.carousel-track {
+  display: flex;
+  width: calc(300px * 10 + 10px * 9); /* 10 изображений + отступы */
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
     </main>
   </div>
