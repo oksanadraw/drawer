@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -24,6 +24,8 @@
       background: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       border-radius: 8px;
+      min-height: 200px;
+      transition: opacity 0.5s ease;
     }
     .news-item {
       border-bottom: 1px solid #ccc;
@@ -78,85 +80,61 @@
       background-color: #cccccc;
       cursor: not-allowed;
     }
+    .page-info {
+      margin: 10px;
+      font-size: 1em;
+      color: #555;
+    }
+    .loading {
+      text-align: center;
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Новости живописи и выставок</h1>
-  </header>
+<header>
+  <h1>Новости живописи и выставок</h1>
+</header>
 
-  <div class="news-container" id="news-container">
-    <!-- Новости будут загружены сюда автоматически -->
-  </div>
+<div class="news-container" id="news-container">
+  <p class="loading">Загрузка новостей...</p>
+</div>
 
-  <div class="pagination" id="pagination">
-    <button id="prevBtn" disabled>Предыдущие</button>
-    <button id="nextBtn">Следующие</button>
-  </div>
+<div class="pagination" id="pagination" style="display: none;">
+  <button id="prevBtn">Предыдущие</button>
+  <span class="page-info" id="pageInfo"></span>
+  <button id="nextBtn">Следующие</button>
+</div>
 
-  <script>
-    const container = document.getElementById('news-container');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+<script>
+  const container = document.getElementById('news-container');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const pageInfo = document.getElementById('pageInfo');
+  const pagination = document.getElementById('pagination');
 
-    let news = [];
-    let currentPage = 1;
-    const itemsPerPage = 5;
+  let news = [];
+  let currentPage = 1;
+  const itemsPerPage = 1;
 
-    function renderPage(page) {
+  function renderPage(page) {
+    container.style.opacity = 0;
+    setTimeout(() => {
       container.innerHTML = '';
       const start = (page - 1) * itemsPerPage;
       const end = start + itemsPerPage;
       const pageItems = news.slice(start, end);
 
-      pageItems.forEach(item => {
-        const newsItem = document.createElement('div');
-        newsItem.className = 'news-item';
-        newsItem.innerHTML = `
-          <div class="news-date">${item.date}</div>
-          <div class="news-title">${item.title}</div>
-          <div class="news-description">${item.description}</div>
-          <a href="${item.link}" class="read-more">Читать далее</a>
-        `;
-        container.appendChild(newsItem);
-      });
-
-      prevBtn.disabled = page === 1;
-      nextBtn.disabled = end >= news.length;
-    }
-
-    function initPagination() {
-      renderPage(currentPage);
-
-      prevBtn.addEventListener('click', () => {
-        if (currentPage > 1) {
-          currentPage--;
-          renderPage(currentPage);
-        }
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if ((currentPage * itemsPerPage) < news.length) {
-          currentPage++;
-          renderPage(currentPage);
-        }
-      });
-    }
-
-    function loadNews() {
-      fetch('news.json')
-        .then(response => response.json())
-        .then(data => {
-          news = data;
-          initPagination();
-        })
-        .catch(error => {
-          console.error('Ошибка загрузки новостей:', error);
-          container.innerHTML = '<p style="text-align:center; color:red;">Не удалось загрузить новости.</p>';
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', loadNews);
-  </script>
-</body>
-</html>
+      if (pageItems.length === 0) {
+        container.innerHTML = '<p class="loading">Новостей нет для отображения.</p>';
+        pagination.style.display = 'none';
+      } else {
+        pageItems.forEach(item => {
+          const newsItem = document.createElement('div');
+          newsItem.className = 'news-item';
+          newsItem.innerHTML = `
+            <div class="news-date">${item.date}</div>
+            <div class="news-title">${item.title}</div>
+            <div class="news-description">${item.descrip
