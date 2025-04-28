@@ -1,5 +1,7 @@
 
-   <!DOCTYPE html>
+   
+    
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -36,13 +38,14 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1 {
+    h1, h2 {
       text-align: center;
       color: #00796b;
     }
     form {
       display: flex;
       flex-direction: column;
+      margin-bottom: 40px;
     }
     input, textarea {
       margin-bottom: 15px;
@@ -77,8 +80,19 @@
 
 <div class="container">
   <h1>Связаться с нами</h1>
-  
-  <form action="https://formspree.io/f/ВАШ_КОД" method="POST">
+
+  <h2>Общий запрос</h2>
+  <form action="https://formsubmit.co/oazarovs@bk.ru" method="POST">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+    <input type="text" name="Имя" placeholder="Ваше имя" required>
+    <input type="email" name="Email" placeholder="Ваш email" required>
+    <textarea name="Сообщение" rows="6" placeholder="Ваше сообщение" required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
+
+  <h2>Предложения и заказы</h2>
+  <form action="https://formsubmit.co/oazarovs@bk.ru" method="POST">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
     <input type="text" name="Имя" placeholder="Ваше имя" required>
     <input type="email" name="Email" placeholder="Ваш email" required>
     <textarea name="Сообщение" rows="6" placeholder="Ваше сообщение" required></textarea>
@@ -86,8 +100,8 @@
   </form>
 
   <div class="info">
-    <p>Email: example@example.com</p>
-    <p>Телефон: +7 (900) 123-45-67</p>
+    <p>Email: oazarovs@bk.ru</p>
+    <p>Телефон: +7 (000) 000-00-00</p>
     <p>Адрес: г. Москва, ул. Примерная, д. 1</p>
   </div>
 </div>
