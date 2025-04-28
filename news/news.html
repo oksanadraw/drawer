@@ -1,1 +1,140 @@
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости искусства</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .news-container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      min-height: 200px;
+      transition: opacity 0.5s ease;
+    }
+    .news-item {
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-date {
+      color: #999;
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+    .news-title {
+      font-size: 1.5em;
+      margin: 10px 0;
+      color: #333;
+    }
+    .news-description {
+      font-size: 1em;
+      margin-bottom: 10px;
+      color: #555;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .read-more:hover {
+      background-color: #0056b3;
+    }
+    .pagination {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .pagination button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    .pagination button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    .page-info {
+      margin: 10px;
+      font-size: 1em;
+      color: #555;
+    }
+    .loading {
+      text-align: center;
+      font-size: 1.2em;
+      color: #555;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Новости живописи и выставок</h1>
+</header>
 
+<div class="news-container" id="news-container">
+  <p class="loading">Загрузка новостей...</p>
+</div>
+
+<div class="pagination" id="pagination" style="display: none;">
+  <button id="prevBtn">Предыдущие</button>
+  <span class="page-info" id="pageInfo"></span>
+  <button id="nextBtn">Следующие</button>
+</div>
+
+<script>
+  const container = document.getElementById('news-container');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const pageInfo = document.getElementById('pageInfo');
+  const pagination = document.getElementById('pagination');
+
+  let news = [];
+  let currentPage = 1;
+  const itemsPerPage = 1;
+
+  function renderPage(page) {
+    container.style.opacity = 0;
+    setTimeout(() => {
+      container.innerHTML = '';
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const pageItems = news.slice(start, end);
+
+      if (pageItems.length === 0) {
+        container.innerHTML = '<p class="loading">Новостей нет для отображения.</p>';
+        pagination.style.display = 'none';
+      } else {
+        pageItems.forEach(item => {
+          const newsItem = document.createElement('div');
+          newsItem.className = 'news-item';
+          newsItem.innerHTML = `
+            <div class="news-date">${item.date}</div>
+            <div class="news-title">${item.title}</div>
+            <div class="news-description">${item.descrip
