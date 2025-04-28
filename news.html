@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -6,135 +6,146 @@
   <title>Новости искусства</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
     }
-    header {
+
+    /* Меню навигации */
+    nav {
       background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
     }
-    .news-container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      min-height: 200px;
-      transition: opacity 0.5s ease;
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
     }
-    .news-item {
-      border-bottom: 1px solid #ccc;
-      padding: 20px 0;
+    nav ul li {
+      margin: 0;
     }
-    .news-item:last-child {
-      border-bottom: none;
-    }
-    .news-date {
-      color: #999;
-      font-size: 0.9em;
-      margin-bottom: 8px;
-    }
-    .news-title {
-      font-size: 1.5em;
-      margin: 10px 0;
-      color: #333;
-    }
-    .news-description {
-      font-size: 1em;
-      margin-bottom: 10px;
-      color: #555;
-    }
-    .read-more {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #007BFF;
-      color: #fff;
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
       text-decoration: none;
-      border-radius: 4px;
       transition: background 0.3s;
     }
-    .read-more:hover {
-      background-color: #0056b3;
+    nav ul li a:hover {
+      background-color: #555;
     }
-    .pagination {
+
+    /* Заголовок */
+    header {
       text-align: center;
-      margin: 20px 0;
+      padding: 30px;
+      background-color: #eee;
     }
-    .pagination button {
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 1em;
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #333;
     }
-    .pagination button:disabled {
-      background-color: #cccccc;
-      cursor: not-allowed;
+
+    /* Новости */
+    .news-container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
     }
-    .page-info {
-      margin: 10px;
-      font-size: 1em;
-      color: #555;
+
+    .news-item {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .loading {
+    .news-item h2 {
+      margin-top: 0;
+    }
+    .news-item p.date {
+      color: #888;
+      font-size: 0.9em;
+    }
+    .news-item a.read-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .news-item a.read-more:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
       text-align: center;
-      font-size: 1.2em;
-      color: #555;
-      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.8em;
+      color: #666;
     }
   </style>
 </head>
+
 <body>
+
+<!-- Навигация -->
+<nav>
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="news.html">Новости</a></li>
+    <li><a href="foto.html">Фото</a></li>
+    <li><a href="video.html">Видео</a></li>
+    <li><a href="history.html">История</a></li>
+    <li><a href="contact.html">Контакты</a></li>
+  </ul>
+</nav>
+
+<!-- Заголовок -->
 <header>
-  <h1>Новости живописи и выставок</h1>
+  <h1>Новости искусства</h1>
 </header>
 
-<div class="news-container" id="news-container">
-  <p class="loading">Загрузка новостей...</p>
+<!-- Контейнер новостей -->
+<div class="news-container">
+
+  <div class="news-item">
+    <p class="date">28 апреля 2025</p>
+    <h2>Открытие выставки в Новой Третьяковке</h2>
+    <p>Молодые художники представили свои работы на тему современности, исследуя новые формы выражения в искусстве.</p>
+    <a class="read-more" href="#">Читать далее</a>
+  </div>
+
+  <div class="news-item">
+    <p class="date">27 апреля 2025</p>
+    <h2>Искусство XXI века</h2>
+    <p>Рецензия на свежий выпуск журнала о цифровой живописи и влиянии технологий на творчество.</p>
+    <a class="read-more" href="#">Читать далее</a>
+  </div>
+
+  <div class="news-item">
+    <p class="date">26 апреля 2025</p>
+    <h2>Пленэр на Кижах</h2>
+    <p>Работы северной природы от ведущих художников, вдохновленные древними деревянными храмами и ландшафтами Карелии.</p>
+    <a class="read-more" href="#">Читать далее</a>
+  </div>
+
+  <div class="news-item">
+    <p class="date">25 апреля 2025</p>
+    <h2>Весенние мотивы</h2>
+    <p>Произведения классиков и современных авторов о весне: от пленэрной живописи до цифровых иллюстраций.</p>
+    <a class="read-more" href="#">Читать далее</a>
+  </div>
+
 </div>
 
-<div class="pagination" id="pagination" style="display: none;">
-  <button id="prevBtn">Предыдущие</button>
-  <span class="page-info" id="pageInfo"></span>
-  <button id="nextBtn">Следующие</button>
-</div>
+<!-- Футер -->
+<footer>
+  &copy; 2025 Новости искусства
+</footer>
 
-<script>
-  const container = document.getElementById('news-container');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const pageInfo = document.getElementById('pageInfo');
-  const pagination = document.getElementById('pagination');
-
-  let news = [];
-  let currentPage = 1;
-  const itemsPerPage = 1;
-
-  function renderPage(page) {
-    container.style.opacity = 0;
-    setTimeout(() => {
-      container.innerHTML = '';
-      const start = (page - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
-      const pageItems = news.slice(start, end);
-
-      if (pageItems.length === 0) {
-        container.innerHTML = '<p class="loading">Новостей нет для отображения.</p>';
-        pagination.style.display = 'none';
-      } else {
-        pageItems.forEach(item => {
-          const newsItem = document.createElement('div');
-          newsItem.className = 'news-item';
-          newsItem.innerHTML = `
-            <div class="news-date">${item.date}</div>
-            <div class="news-title">${item.title}</div>
-            <div class="news-description">${item.descrip
+</body>
+</html>
