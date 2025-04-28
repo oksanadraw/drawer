@@ -1,63 +1,17 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новости искусства</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
-
-    /* Меню навигации */
-    nav {
-      background-color: #333;
-    }
-    nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul li {
-      margin: 0;
-    }
-    nav ul li a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav ul li a:hover {
-      background-color: #555;
-    }
-
-    /* Заголовок */
-    header {
-      text-align: center;
-      padding: 30px;
-      background-color: #eee;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #333;
-    }
-
-    /* Новости */
-    .news-container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
     .news-item {
-      background: white;
+      background: #ffffff;
       margin-bottom: 20px;
       padding: 20px;
       border-radius: 8px;
@@ -65,87 +19,53 @@
     }
     .news-item h2 {
       margin-top: 0;
+      color: #333;
     }
     .news-item p.date {
-      color: #888;
+      color: gray;
       font-size: 0.9em;
+      margin-bottom: 10px;
     }
-    .news-item a.read-more {
-      display: inline-block;
-      margin-top: 10px;
+    .news-item a {
       color: #0077cc;
       text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
     }
-    .news-item a.read-more:hover {
+    .news-item a:hover {
       text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.8em;
-      color: #666;
     }
   </style>
 </head>
-
 <body>
 
-<!-- Навигация -->
-<nav>
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="news.html">Новости</a></li>
-    <li><a href="foto.html">Фото</a></li>
-    <li><a href="video.html">Видео</a></li>
-    <li><a href="history.html">История</a></li>
-    <li><a href="contact.html">Контакты</a></li>
-  </ul>
-</nav>
-
-<!-- Заголовок -->
-<header>
-  <h1>Новости искусства</h1>
-</header>
-
-<!-- Контейнер новостей -->
-<div class="news-container">
-
-  <div class="news-item">
-    <p class="date">28 апреля 2025</p>
-    <h2>Открытие выставки в Новой Третьяковке</h2>
-    <p>Молодые художники представили свои работы на тему современности, исследуя новые формы выражения в искусстве.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
-  <div class="news-item">
-    <p class="date">27 апреля 2025</p>
-    <h2>Искусство XXI века</h2>
-    <p>Рецензия на свежий выпуск журнала о цифровой живописи и влиянии технологий на творчество.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
-  <div class="news-item">
-    <p class="date">26 апреля 2025</p>
-    <h2>Пленэр на Кижах</h2>
-    <p>Работы северной природы от ведущих художников, вдохновленные древними деревянными храмами и ландшафтами Карелии.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
-  <div class="news-item">
-    <p class="date">25 апреля 2025</p>
-    <h2>Весенние мотивы</h2>
-    <p>Произведения классиков и современных авторов о весне: от пленэрной живописи до цифровых иллюстраций.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
+<div class="news-item">
+  <p class="date">28 апреля 2025</p>
+  <h2>Открытие выставки в Новой Третьяковке</h2>
+  <p>Молодые художники представили свои работы на тему современности, исследуя новые формы выражения в искусстве.</p>
+  <a href="#">Читать далее</a>
 </div>
 
-<!-- Футер -->
-<footer>
-  &copy; 2025 Новости искусства
-</footer>
+<div class="news-item">
+  <p class="date">27 апреля 2025</p>
+  <h2>Искусство XXI века</h2>
+  <p>Рецензия на свежий выпуск журнала о цифровой живописи и влиянии технологий на творчество.</p>
+  <a href="#">Читать далее</a>
+</div>
+
+<div class="news-item">
+  <p class="date">26 апреля 2025</p>
+  <h2>Пленэр на Кижах</h2>
+  <p>Работы северной природы от ведущих художников, вдохновленные древними деревянными храмами и ландшафтами Карелии.</p>
+  <a href="#">Читать далее</a>
+</div>
+
+<div class="news-item">
+  <p class="date">25 апреля 2025</p>
+  <h2>Весенние мотивы</h2>
+  <p>Произведения классиков и современных авторов о весне: от пленэрной живописи до цифровых иллюстраций.</p>
+  <a href="#">Читать далее</a>
+</div>
 
 </body>
 </html>
