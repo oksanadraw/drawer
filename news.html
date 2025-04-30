@@ -1,99 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новости искусства</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Меню навигации */
-    nav {
-      background-color: #333;
-    }
-    nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul li {
-      margin: 0;
-    }
-    nav ul li a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav ul li a:hover {
-      background-color: #555;
-    }
-
-    /* Заголовок */
-    header {
-      text-align: center;
-      padding: 30px;
-      background-color: #eee;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #333;
-    }
-
-    /* Новости */
-    .news-container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    .news-item {
-      background: white;
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .news-item h2 {
-      margin-top: 0;
-    }
-    .news-item p.date {
-      color: #888;
-      font-size: 0.9em;
-    }
-    .news-item a.read-more {
-      display: inline-block;
-      margin-top: 10px;
-      color: #0077cc;
-      text-decoration: none;
-    }
-    .news-item a.read-more:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.8em;
-      color: #666;
-    }
+    body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+    nav { background-color: #333; display: flex; align-items: center; padding: 0 10px; }
+    nav img.logo { height: 40px; margin-right: 20px; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav ul li a { display: block; padding: 15px 20px; color: white; text-decoration: none; }
+    nav ul li a:hover { background-color: #555; }
+    header { text-align: center; background-color: #eee; padding: 30px 0; }
+    .news-container { max-width: 900px; margin: 20px auto; padding: 20px; }
+    .news-item { background: white; margin-bottom: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .news-item h2 { margin-top: 0; }
+    .news-item .date { font-size: 0.9em; color: gray; }
+    .news-item a { color: #0077cc; text-decoration: none; }
+    .news-item a:hover { text-decoration: underline; }
   </style>
 </head>
-
 <body>
 
-<!-- Навигация -->
 <nav>
+  <img src="/images/logo.png" alt="Логотип" class="logo">
   <ul>
     <li><a href="index.html">Главная</a></li>
     <li><a href="news.html">Новости</a></li>
@@ -101,48 +31,37 @@
   </ul>
 </nav>
 
-<!-- Заголовок -->
 <header>
   <h1>Новости искусства</h1>
 </header>
 
-<!-- Контейнер новостей -->
-<div class="news-container">
-
-  <div class="news-item">
-    <p class="date">28 апреля 2025</p>
-    <h2>Открытие выставки в Новой Третьяковке</h2>
-    <p>Молодые художники представили свои работы на тему современности, исследуя новые формы выражения в искусстве.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
-  <div class="news-item">
-    <p class="date">27 апреля 2025</p>
-    <h2>Искусство XXI века</h2>
-    <p>Рецензия на свежий выпуск журнала о цифровой живописи и влиянии технологий на творчество.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
-  <div class="news-item">
-    <p class="date">26 апреля 2025</p>
-    <h2>Пленэр на Кижах</h2>
-    <p>Работы северной природы от ведущих художников, вдохновленные древними деревянными храмами и ландшафтами Карелии.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
-  <div class="news-item">
-    <p class="date">25 апреля 2025</p>
-    <h2>Весенние мотивы</h2>
-    <p>Произведения классиков и современных авторов о весне: от пленэрной живописи до цифровых иллюстраций.</p>
-    <a class="read-more" href="#">Читать далее</a>
-  </div>
-
+<div class="news-container" id="newsContainer">
+  <!-- Новости будут подгружены сюда -->
 </div>
 
-<!-- Футер -->
-<footer>
-  &copy; 2025 Новости искусства
-</footer>
+<script>
+  fetch('news.json')
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('newsContainer');
+      data.forEach(news => {
+        const div = document.createElement('div');
+        div.className = 'news-item';
+        div.innerHTML = `
+          <p class="date">${news.date}</p>
+          <h2>${news.title}</h2>
+          <p>${news.description}</p>
+          <a href="${news.link}" target="_blank">Читать далее</a>
+        `;
+        container.appendChild(div);
+      });
+    })
+    .catch(error => {
+      document.getElementById('newsContainer').innerHTML = '<p>Не удалось загрузить новости.</p>';
+      console.error(error);
+    });
+</script>
 
 </body>
 </html>
+
