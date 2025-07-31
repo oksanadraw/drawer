@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Минск — Ждановичи</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      background-color: #800080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .horizontal-menu ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      background-color: #800080;
+    }
+    .horizontal-menu li {
+      margin: 0 15px;
+    }
+    .horizontal-menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .horizontal-menu a:hover {
+      text-decoration: underline;
+    }
+    .content-wrapper {
+      display: flex;
+    }
+    .vertical-menu {
+      width: 200px;
+      background-color: #f3e5f5;
+      padding: 15px;
+    }
+    .vertical-menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .vertical-menu li {
+      margin-bottom: 10px;
+    }
+    .vertical-menu a {
+      text-decoration: none;
+      color: #800080;
+      font-weight: bold;
+    }
+    .vertical-menu a:hover {
+      color: #5e005e;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      flex: 1;
+    }
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #800080;
+    }
+    footer {
+      background-color: #800080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Минск — Ждановичи</h1>
+  </header>
+  <nav class="horizontal-menu">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="gallery.html">Галерея</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="contact.html">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="content-wrapper">
+    <nav class="vertical-menu">
+      <ul>
+        <li><a href="plener_uz.html">пленэр Узбекистан</a></li>
+        <li><a href="plener_kizi.html">пленэр Кижи</a></li>
+        <li><a href="plener_pskov.html">пленэр Псков</a></li>
+        <li><a href="minsk.html">Минск, Ждановичи</a></li>
+        <li><a href="novgorod.html">Великий Новгород</a></li>
+      </ul>
+    </nav>
+    <div class="gallery">
+      <figure><img src="IMG_6379.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6381.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6390.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6391.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6392.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6401.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6414.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6416.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      <figure><img src="IMG_6432.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 Мой сайт</p>
+  </footer>
+</body>
+</html>
