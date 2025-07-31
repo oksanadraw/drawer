@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Минск — Ждановичи</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Галерея</title>
   <style>
     :root {
       --main-color: #800080;
@@ -86,20 +86,6 @@
       border-radius: 8px;
       border: 2px solid var(--main-color);
     }
-    .description {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 30px;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
     footer {
       background-color: var(--main-color);
       color: white;
@@ -125,8 +111,9 @@
 </head>
 <body>
   <header>
-    <h1>Минск — Ждановичи</h1>
+    <h1>Галерея</h1>
   </header>
+
   <nav class="horizontal-menu">
     <ul>
       <li><a href="index.html">Главная</a></li>
@@ -135,6 +122,7 @@
       <li><a href="contact.html">Контакты</a></li>
     </ul>
   </nav>
+
   <div class="content-wrapper">
     <nav class="vertical-menu">
       <ul>
@@ -145,48 +133,24 @@
         <li><a href="novgorod.html">Великий Новгород</a></li>
       </ul>
     </nav>
-    <div class="main-content">
-      <div class="description fade-in">
-        <h2>Летний отдых в Ждановичах</h2>
-        <p>Ждановичи — зелёный уголок рядом с Минском, где можно почувствовать настоящий отдых вдали от городской суеты. Это место популярно среди минчан как дачный и прогулочный район, особенно в летние месяцы.</p>
-        <p>Летом Ждановичи наполняются солнцем, запахом сосен и цветущих трав. Здесь приятно гулять по тихим улочкам, отдыхать у воды и наблюдать за жизнью природы. В кадрах запечатлены моменты прогулок, пейзажи, старые постройки и детали, создающие атмосферу спокойствия и уюта.</p>
-        <p>Эти фотографии — отражение тёплого, неспешного времени, когда хочется остановиться, вдохнуть полной грудью и просто быть. Добро пожаловать в Ждановичи — место, где лето ощущается особенно ярко.</p>
-      </div>
 
+    <div class="main-content">
       <div class="gallery">
-        <figure><img src="images/IMG_6379.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6381.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6390.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6391.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6392.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6401.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6402.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6403.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6404.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6405.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6414.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6416.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6417.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6418.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
-        <figure><img src="images/IMG_6432.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/gallery1.jpg" alt="Работа 1"><figcaption>Работа 1</figcaption></figure>
+        <figure><img src="images/gallery2.jpg" alt="Работа 2"><figcaption>Работа 2</figcaption></figure>
+        <figure><img src="images/gallery3.jpg" alt="Работа 3"><figcaption>Работа 3</figcaption></figure>
+        <figure><img src="images/gallery4.jpg" alt="Работа 4"><figcaption>Работа 4</figcaption></figure>
+        <figure><img src="images/gallery5.jpg" alt="Работа 5"><figcaption>Работа 5</figcaption></figure>
+        <figure><img src="images/gallery6.jpg" alt="Работа 6"><figcaption>Работа 6</figcaption></figure>
       </div>
     </div>
   </div>
+
   <footer>
     <p>© 2025 Мой сайт</p>
   </footer>
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
+
+    
+    
