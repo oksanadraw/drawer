@@ -5,64 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Минск — Ждановичи</title>
   <style>
+    :root {
+      --main-color: #800080;
+      --light-bg: #f3e5f5;
+      --text-color: #333;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      color: var(--text-color);
     }
     header {
-      background-color: #800080;
+      background-color: var(--main-color);
       color: white;
       padding: 20px;
       text-align: center;
     }
-    .horizontal-menu ul {
+    nav.horizontal-menu ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       margin: 0;
       padding: 0;
-      background-color: #800080;
+      background-color: var(--main-color);
     }
-    .horizontal-menu li {
-      margin: 0 15px;
+    nav.horizontal-menu li {
+      margin: 0 10px;
     }
-    .horizontal-menu a {
+    nav.horizontal-menu a {
+      display: block;
+      padding: 12px 16px;
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
-    .horizontal-menu a:hover {
-      text-decoration: underline;
+    nav.horizontal-menu a:hover {
+      background-color: #5e005e;
     }
     .content-wrapper {
       display: flex;
+      flex-wrap: wrap;
     }
     .vertical-menu {
       width: 200px;
-      background-color: #f3e5f5;
+      background-color: var(--light-bg);
       padding: 15px;
     }
     .vertical-menu ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
     }
     .vertical-menu li {
       margin-bottom: 10px;
     }
     .vertical-menu a {
       text-decoration: none;
-      color: #800080;
+      color: var(--main-color);
       font-weight: bold;
     }
     .vertical-menu a:hover {
       color: #5e005e;
     }
+    .main-content {
+      flex: 1;
+      padding: 20px;
+    }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 15px;
-      padding: 20px;
-      flex: 1;
     }
     .gallery figure {
       margin: 0;
@@ -71,14 +84,42 @@
     .gallery img {
       width: 100%;
       border-radius: 8px;
-      border: 2px solid #800080;
+      border: 2px solid var(--main-color);
+    }
+    .description {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     footer {
-      background-color: #800080;
+      background-color: var(--main-color);
       color: white;
       text-align: center;
       padding: 10px;
-      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      .content-wrapper {
+        flex-direction: column;
+      }
+      .vertical-menu {
+        width: 100%;
+      }
+      nav.horizontal-menu ul {
+        flex-direction: column;
+      }
+      nav.horizontal-menu li {
+        text-align: center;
+        margin: 0;
+      }
     }
   </style>
 </head>
@@ -104,25 +145,45 @@
         <li><a href="novgorod.html">Великий Новгород</a></li>
       </ul>
     </nav>
-    <div class="gallery">
-     <img src="images/IMG_6379.jpg" alt="Ждановичи">
-     <img src="images/IMG_6475.jpg" alt="Ждановичи">
-    <img src="images/IMG_6390.jpg" alt="Ждановичи">
-    <img src="images/IMG_6391.jpg" alt="Ждановичи">
-     <img src="images/IMG_6392.jpg" alt="Ждановичи">
-     <img src="images/IMG_6401.jpg" alt="Ждановичи">
-     <img src="images/IMG_6414.jpg" alt="Ждановичи">
-     <img src="images/IMG_6416.jpg" alt="Ждановичи">
-     <img src="images/IMG_6415.jpg" alt="Ждановичи">
-      <img src="images/IMG_6404.jpg" alt="Ждановичи">
-      <img src="images/IMG_6434.jpg" alt="Ждановичи">
-      <img src="images/IMG_6394.jpg" alt="Ждановичи">
-      <img src="images/IMG_6448.jpg" alt="Ждановичи">
-      <img src="images/IMG_6451.jpg" alt="Ждановичи">
+    <div class="main-content">
+      <div class="description fade-in">
+        <h2>Летний отдых в Ждановичах</h2>
+        <p>Ждановичи — зелёный уголок рядом с Минском, где можно почувствовать настоящий отдых вдали от городской суеты. Это место популярно среди минчан как дачный и прогулочный район, особенно в летние месяцы.</p>
+        <p>Летом Ждановичи наполняются солнцем, запахом сосен и цветущих трав. Здесь приятно гулять по тихим улочкам, отдыхать у воды и наблюдать за жизнью природы. В кадрах запечатлены моменты прогулок, пейзажи, старые постройки и детали, создающие атмосферу спокойствия и уюта.</p>
+        <p>Эти фотографии — отражение тёплого, неспешного времени, когда хочется остановиться, вдохнуть полной грудью и просто быть. Добро пожаловать в Ждановичи — место, где лето ощущается особенно ярко.</p>
+      </div>
+
+      <div class="gallery">
+        <figure><img src="images/IMG_6379.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6381.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6390.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6391.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6392.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6401.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6414.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6416.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+        <figure><img src="images/IMG_6432.jpg" alt="Ждановичи"><figcaption>Ждановичи</figcaption></figure>
+      </div>
     </div>
   </div>
   <footer>
     <p>© 2025 Мой сайт</p>
   </footer>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
+
+  
+     
