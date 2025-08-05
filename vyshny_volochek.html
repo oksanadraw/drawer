@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вышний Волочёк — Искусство и архитектура</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background-color: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background-color: #3a3a3a;
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    nav.topnav {
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav.topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+    }
+
+    nav.topnav a:hover {
+      background-color: #777;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav.sidenav {
+      width: 220px;
+      background-color: #eee;
+      padding-top: 20px;
+      flex-shrink: 0;
+    }
+
+    nav.sidenav a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav.sidenav a:hover {
+      background-color: #ddd;
+    }
+
+    main {
+      padding: 30px;
+      flex-grow: 1;
+      background-color: #fff;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #222;
+      margin-top: 40px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Галерея */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .gallery figure {
+      flex: 1 1 300px;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .gallery figcaption {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      nav.sidenav {
+        width: 100%;
+        text-align: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .gallery figure {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Путевые заметки художника: Вышний Волочёк</h1>
+</header>
+
+<nav class="topnav">
+  <a href="index.html">Главная</a>
+  <a href="about.html">О художнике</a>
+  <a href="gallery.html">Галерея</a>
+  <a href="routes.html">Маршруты</a>
+  <a href="contacts.html">Контакты</a>
+</nav>
+
+<div class="container">
+
+  <nav class="sidenav">
+    <a href="kostroma.html">Кострома</a>
+    <a href="tver.html">Тверская область</a>
+    <a href="vyshny_volochek.html"><strong>Вышний Волочёк</strong></a>
+    <a href="ivanovo.html">Иваново</a>
+    <a href="yaroslavl.html">Ярославль</a>
+  </nav>
+
+  <main>
+
+    <p>
+      Вышний Волочёк — уникальный город Верхнего Поволжья, сочетающий инженерное наследие Петра I, старинную православную архитектуру и советскую эстетику стекольного искусства. В рамках поездки по Тверской области я посетила этот город, чтобы запечатлеть его в живописи и собрать визуальный материал для будущих работ.
+    </p>
+
+    <h2>Гидроузел Вышнего Волочка</h2>
+    <p>
+      В центре города — прекрасный ансамбль с каналом и собором, отражающимся в воде. Старинная гидросистема, задуманная Петром I, создаёт удивительный ландшафт. Здание вокзала — пример неоклассической архитектуры с элементами индустриального модерна.
+    </p>
+
+    <h2>Завод художественного стекла «Красный май»</h2>
+    <p>
+      Посещение музея при заводе «Красный май» стало настоящим открытием. Это не только стекло — это культурная летопись, отражённая в форме, цвете и пропаганде. Здесь сочетаются агитационный стиль 1920-х годов, классические традиции гранёного хрусталя и эксперименты с формой 1980-х.
+    </p>
+
+    <h2>Фотозарисовки Вышнего Волочка</h2>
+
+    <div class="gallery">
+
+      <figure>
+        <img src="img/hydro_nodes.jpg" alt="Канал имени Москвы">
+        <figcaption>Канал имени Москвы</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/IMG_6.jpg" alt="Прогулка по набережной">
+        <figcaption>Прогулка по набережной</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/vokzal.jpg" alt="Вокзал и памятник Петру I">
+        <figcaption>Вокзал и памятник Петру I</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/sobor.jpg" alt="Собор на канале">
+        <figcaption>Собор на берегу канала</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/krasny_may.jpg" alt="Выставка стекла Красный май">
+        <figcaption>Выставка стекла «Красный май»</figcaption>
+      </figure>
+
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
