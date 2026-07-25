@@ -1,154 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Галерея</title>
-  <style>
-    :root {
-      --main-color: #800080;
-      --light-bg: #f3e5f5;
-      --text-color: #333;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      color: var(--text-color);
-    }
-    header {
-      background-color: var(--main-color);
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav.horizontal-menu ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      background-color: var(--main-color);
-    }
-    nav.horizontal-menu li {
-      margin: 0 10px;
-    }
-    nav.horizontal-menu a {
-      display: block;
-      padding: 12px 16px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav.horizontal-menu a:hover {
-      background-color: #5e005e;
-    }
-    .content-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .vertical-menu {
-      width: 200px;
-      background-color: var(--light-bg);
-      padding: 15px;
-    }
-    .vertical-menu ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    .vertical-menu li {
-      margin-bottom: 10px;
-    }
-    .vertical-menu a {
-      text-decoration: none;
-      color: var(--main-color);
-      font-weight: bold;
-    }
-    .vertical-menu a:hover {
-      color: #5e005e;
-    }
-    .main-content {
-      flex: 1;
-      padding: 20px;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-    .gallery figure {
-      margin: 0;
-      text-align: center;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      border: 2px solid var(--main-color);
-    }
-    footer {
-      background-color: var(--main-color);
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-    @media (max-width: 768px) {
-      .content-wrapper {
-        flex-direction: column;
-      }
-      .vertical-menu {
-        width: 100%;
-      }
-      nav.horizontal-menu ul {
-        flex-direction: column;
-      }
-      nav.horizontal-menu li {
-        text-align: center;
-        margin: 0;
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="theme.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Галерея работ — Оксана Азарова</title>
+  <meta name="description" content="Галерея живописи, вышивки и творческих проектов художницы Оксаны Азаровой.">
+  <link rel="canonical" href="https://azarovapictur.ru/gallery">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Галерея работ Оксаны Азаровой">
+  <meta property="og:description" content="Живопись, выставочные проекты и путевые впечатления.">
+  <meta property="og:image" content="https://azarovapictur.ru/assets/images/floral.jpg">
+  <link rel="icon" href="logo.webp" type="image/webp">
+  <link rel="stylesheet" href="theme.css?v=3">
+  <script defer src="site.js?v=3"></script>
 </head>
 <body>
-  <header>
-    <h1>Галерея</h1>
-  </header>
-
-  <nav class="horizontal-menu">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="gallery.html">Галерея</a></li>
-      <li><a href="about.html">О нас</a></li>
-      <li><a href="contact.html">Контакты</a></li>
-    </ul>
-  </nav>
-
-  <div class="content-wrapper">
-    <nav class="vertical-menu">
-      <ul>
-        <li><a href="plener_uz.html">пленэр Узбекистан</a></li>
-        <li><a href="plener_kizi.html">пленэр Кижи</a></li>
-        <li><a href="plener_pskov.html">пленэр Псков</a></li>
-        <li><a href="minsk.html">Минск, Ждановичи</a></li>
-        <li><a href="novgorod.html">Великий Новгород</a></li>
-      </ul>
-    </nav>
-
-    <div class="main-content">
-      <div class="gallery">
-        <figure><img src="verbl2.jpg" alt="Работа 1"><figcaption>Работа 1</figcaption></figure>
-        <figure><img src="bur.jpg" alt="Работа 2"><figcaption>Работа 2</figcaption></figure>
-        <figure><img src="flowrs.jpg" alt="Работа 3"><figcaption>Работа 3</figcaption></figure>
-        <figure><img src="kisz2.gif" alt="Работа 4"><figcaption>Работа 4</figcaption></figure>
-        <figure><img src="kizsi.gif" alt="Работа 5"><figcaption>Работа 5</figcaption></figure>
-        <figure><img src="lodka.gif" alt="Работа 6"><figcaption>Работа 6</figcaption></figure>
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <header class="site-header"><div class="site-header__inner"><a class="brand" href="index.html"><img src="logo.webp" width="54" height="54" alt=""><span>Оксана Азарова<small>Художник</small></span></a><nav class="site-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="about.html">О художнике</a><a href="gallery.html" aria-current="page">Галерея</a><a href="internet.html">Работы в продаже</a><a href="news.html">Новости</a><a href="contact.html">Контакты</a></nav></div></header>
+  <main id="main-content">
+    <header class="page-hero"><span class="eyebrow">Галерея</span><h1>Работы и художественные наблюдения</h1><p>Избранные произведения, выставочные проекты и образы, привезённые из путешествий.</p></header>
+    <nav class="subnav" aria-label="Коллекции"><a href="gallery.html" aria-current="page">Избранное</a><a href="plener_uz.html">Узбекистан</a><a href="plener_kizi.html">Кижи</a><a href="plener_pskov.html">Псков</a><a href="minsk.html">Минск</a><a href="vyshny_volochek.html">Вышний Волочёк</a></nav>
+    <section class="section section--compact">
+      <div class="gallery-grid">
+        <figure><a href="assets/images/floral.jpg"><img src="assets/images/floral.jpg" width="1350" height="1800" alt="Цветочная живописная композиция" loading="lazy" decoding="async"></a><figcaption>Цветочная композиция · живопись</figcaption></figure>
+        <figure><a href="assets/images/camels.jpg"><img src="assets/images/camels.jpg" width="1800" height="1350" alt="Живописная работа с верблюдами" loading="lazy" decoding="async"></a><figcaption>Путевые впечатления · живопись</figcaption></figure>
+        <figure><a href="assets/images/art-bur.jpg"><img src="assets/images/art-bur.jpg" width="1350" height="1800" alt="Живописный пейзаж" loading="lazy" decoding="async"></a><figcaption>Пейзаж · живопись</figcaption></figure>
+        <figure><a href="assets/images/featured-1.jpg"><img src="assets/images/featured-1.jpg" width="1012" height="1800" alt="Работа из авторской коллекции" loading="lazy" decoding="async"></a><figcaption>Авторская коллекция</figcaption></figure>
+        <figure><a href="assets/images/featured-3.jpg"><img src="assets/images/featured-3.jpg" width="1800" height="793" alt="Экспозиция работ Оксаны Азаровой" loading="lazy" decoding="async"></a><figcaption>Выставочный проект</figcaption></figure>
+        <figure><a href="assets/images/still-life.jpg"><img src="assets/images/still-life.jpg" width="1566" height="1800" alt="Натюрморт маслом" loading="lazy" decoding="async"></a><figcaption>Натюрморт · масло</figcaption></figure>
       </div>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2025 Мой сайт</p>
-  </footer>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p>© <span data-current-year>2026</span> Оксана Азарова</p><div class="site-footer__links"><a href="mailto:oazarovs@bk.ru">oazarovs@bk.ru</a><a href="contact.html">Связаться</a></div></div></footer>
 </body>
 </html>

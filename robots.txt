@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.azarovapictur.ru/sitemap.xml
+Sitemap: https://azarovapictur.ru/sitemap.xml

@@ -1,160 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQB5V3KNCV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TQB5V3KNCV');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Оксана Азарова — Художник</title>
-  <meta name="description" content="Художник Оксана Азарова. Галерея картин, вышивка, живопись. Выставки, творчество и интернет-магазин оригинальных работ.">
-  <meta name="keywords" content="Оксана Азарова, картины, искусство, художник, вышивка, выставка, живопись">
-  <meta name="robots" content="index, follow" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
-    .sidebar {
-      width: 250px;
-      background: linear-gradient(45deg, #ff6b6b, #f06595);
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-    .logo {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .logo img {
-      max-width: 100%;
-      height: auto;
-    }
-    .menu {
-      list-style: none;
-    }
-    .menu li {
-      margin: 15px 0;
-    }
-    .menu li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 18px;
-      display: block;
-      padding: 10px;
-      border-radius: 4px;
-      transition: background 0.3s;
-    }
-    .menu li a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .content {
-      flex: 1;
-      padding: 40px;
-      background: #f8f9fa;
-    }
-    .content h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      color: #f06595;
-    }
-    .content p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .gallery img, .content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-  <link rel="stylesheet" href="theme.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>О художнице — Оксана Азарова</title>
+  <meta name="description" content="Творческий путь Оксаны Азаровой, образование, выставки, живопись, вышивка и художественные проекты.">
+  <link rel="canonical" href="https://azarovapictur.ru/about">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="О художнице — Оксана Азарова">
+  <meta property="og:description" content="Творческий путь, выставки и художественные проекты.">
+  <meta property="og:image" content="https://azarovapictur.ru/assets/images/artist.jpg">
+  <link rel="icon" href="logo.webp" type="image/webp">
+  <link rel="stylesheet" href="theme.css?v=3">
+  <script defer src="site.js?v=3"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="logo">
-        <img src="logo.webp" alt="Логотип художника" />
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html"><img src="logo.webp" width="54" height="54" alt=""><span>Оксана Азарова<small>Художник</small></span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a><a href="about.html" aria-current="page">О художнике</a><a href="gallery.html">Галерея</a><a href="internet.html">Работы в продаже</a><a href="news.html">Новости</a><a href="contact.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <header class="page-hero">
+      <span class="eyebrow">О художнице</span>
+      <h1>Оксана Азарова</h1>
+      <p>Художница соединяет академическую основу с поиском новых материалов, фактур и способов художественного высказывания.</p>
+    </header>
+    <section class="section section--compact">
+      <div class="story">
+        <div class="story__media">
+          <img src="assets/images/artist.jpg" width="1800" height="1201" alt="Оксана Азарова" loading="eager">
+          <img src="assets/images/exhibition-1.jpg" width="1350" height="1800" alt="Работа на выставке" loading="lazy" decoding="async">
+        </div>
+        <article class="prose">
+          <h2>Творческий путь</h2>
+          <p>Оксана Азарова окончила Московскую художественно-промышленную академию имени С. Г. Строганова и является участником Творческого союза художников России.</p>
+          <p>В её практике классическая живопись встречается с вышивкой и смешанными техниками. В центре внимания — цвет, эмоциональное движение и способность повседневного впечатления становиться художественным образом.</p>
+          <h2>Выставочные проекты</h2>
+          <p>Работы художницы были представлены на персональных и коллективных выставках. В Мемориальном музее Александра Скрябина прошла выставка «Яркий мир», объединившая живописные и вышитые произведения.</p>
+          <p>В декабре 2023 года Оксана приняла участие в проекте «Вторая жизнь» в Московской городской Думе. Для художницы выставка стала пространством поддержки, благодарности и живого диалога со зрителем.</p>
+          <h2>Пленэр и наблюдение</h2>
+          <p>Поездки и работа на открытом воздухе помогают собирать визуальный материал, исследовать характер света и находить новые композиционные решения.</p>
+          <div class="actions"><a class="button" href="gallery.html">Перейти в галерею</a><a class="button button--ghost" href="contact.html">Связаться</a></div>
+        </article>
       </div>
-      <ul class="menu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="gallery.html">Галерея</a></li>
-        <li><a href="internet.html">Интернет‑магазин</a></li>
-      </ul>
-    </div>
-
-    <div class="content">
-      <h1>О художнике</h1>
-
-      <p>
-        <img src="cvo2.JPG" alt="Картина слева" style="float:left; width:30%; margin: 0 20px 20px 0;">
-        Добро пожаловать на страницу художника! Здесь вы познакомитесь с творчеством, узнаете историю создания работ и откроете для себя уникальный мир искусства.
-      </p>
- <h2> Пленэр. Канал им.Москвы. Гидроузлы Тверской области </h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 30px;">
-        
-        <img src="gidro.jpg" alt="Инфографика о гидроузлах Тверской области" style="float:right; width:30%; margin: 0 0 20px 20px 0;"">
-        <img src="gidro_1.jpg" alt="Инфографика о гидроузлах Тверской области" style="float:center; width:30%; margin: 0 0 20px 20px 0;"">
-         <p>
-  
-     <p> 
-     Тверская область обладает богатым гидротехническим наследием, важнейшими элементами которого являются Вышневолоцкий и Тверской гидроузлы...</p>
- </div>
-      <h2>Вторая жизнь искусства — участие в выставке в поддержку участников СВО</h2>
-
-      <p>
-         <img src="cvo3.jpg" alt="Картина слева" style="float:left; width:30%; margin: 0 20px 20px 0;">
-        <img src="cvo1.JPG" alt="Картина справа" style="float:right; width:30%; margin: 0 0 20px 20px;">
-        В декабре 2023 года в стенах Московской городской Думы состоялась акция «Искусство СВОим», посвящённая поддержке участников специальной военной операции в рамках арт-проекта "Вторая жизнь". Участие в этом проекте стало для меня важным профессиональным и личным событием.
-      </p>
-
-      <p>Проект объединил художников, вдохновлённых идеей обновления. Моя работа была выполнена маслом и несла в себе эстетическое и эмоциональное послание...</p>
-
-      <h2>Другие выставки</h2>
-
-      <p>В Мемориальном музее Александра Скрябина 17 сентября 2022 года прошла выставка «Яркий мир»...</p>
-
-      <p>
-        <img src="img/vis_1.JPG" alt="Картина лодка" style="float:right; width:30%; margin: 0 0 20px 20px;">
-        Оксана Азарова — участник Творческого союза художников России...
-      </p>
-
-      <p>
-        <img src="img/vis_11.JPG" alt="Картина выставки" style="float:left; width:30%; margin: 0 20px 20px 0;">
-        В марте 2019 года в Доме учёных состоялась персональная выставка...
-      </p>
-
-      <p>
-        <img src="img/vis_2.JPG" alt="Цветы и вышивка" style="display:block; margin: 0 auto 20px auto; width:30%;">
-        Цветы распустились на холстах и ткани...
-      </p>
-
-      <p>
-        <img src="img/vis_3.JPG" alt="Северное сияние" style="float:right; width:30%; margin: 0 0 20px 20px;">
-        Картина «Северное сияние» стала напоминанием о чуде...
-      </p>
-
-      <p>
-        <img src="img/vis_4.JPG" alt="Галерея" style="float:left; width:30%; margin: 0 20px 20px 0;">
-        Исследуйте разделы сайта, чтобы увидеть галерею работ...
-      </p>
-    </div>
-  </div>
+    </section>
+    <section class="section section--tinted">
+      <div class="section-heading"><div><span class="eyebrow">Исследование места</span><h2>Гидроузлы Тверской области</h2></div><p>Художественные наблюдения за инженерным наследием, водой и архитектурой.</p></div>
+      <div class="art-grid">
+        <article class="art-card"><img src="assets/images/hydro.jpg" width="1800" height="1350" alt="Гидротехническое сооружение в Тверской области" loading="lazy" decoding="async"><div class="art-card__body"><h3>Вода и конструкция</h3></div></article>
+        <article class="art-card"><img src="assets/images/hydro-detail.jpg" width="1350" height="1800" alt="Архитектурная деталь гидроузла" loading="lazy" decoding="async"><div class="art-card__body"><h3>Инженерное наследие</h3></div></article>
+        <article class="art-card"><img src="assets/images/exhibition-2.jpg" width="1350" height="1800" alt="Произведение на выставке" loading="lazy" decoding="async"><div class="art-card__body"><h3>Выставочный контекст</h3></div></article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p>© <span data-current-year>2026</span> Оксана Азарова</p><div class="site-footer__links"><a href="mailto:oazarovs@bk.ru">oazarovs@bk.ru</a><a href="contact.html">Связаться</a></div></div></footer>
 </body>
 </html>

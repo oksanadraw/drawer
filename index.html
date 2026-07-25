@@ -1,199 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQB5V3KNCV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TQB5V3KNCV');
-</script>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная страница художника</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    header .logo {
-      width: 50px;
-      height: auto;
-      margin-right: 10px;
-    }
-    header h1 {
-      font-size: 1.8em;
-    }
-    nav.horizontal {
-      background: #444;
-    }
-    nav.horizontal ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-    nav.horizontal ul li {
-      margin: 0 15px;
-    }
-    nav.horizontal ul li a {
-      text-decoration: none;
-      color: #fff;
-      padding: 10px 15px;
-      transition: background 0.3s;
-    }
-    nav.horizontal ul li a:hover {
-      background: #666;
-    }
-    .container {
-      display: flex;
-    }
-    aside.vertical-menu {
-      width: 200px;
-      background: #333;
-      min-height: calc(100vh - 80px);
-    }
-    aside.vertical-menu ul {
-      list-style: none;
-    }
-    aside.vertical-menu ul li {
-      border-bottom: 1px solid #444;
-    }
-    aside.vertical-menu ul li a {
-      display: block;
-      color: #fff;
-      padding: 15px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    aside.vertical-menu ul li a:hover {
-      background: #555;
-    }
-    main.content {
-      flex: 1;
-      padding: 20px;
-    }
-    section.about {
-      background: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .profile-photo {
-      float: left;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      width: 200px;
-      border-radius: 5px;
-    }
-    .carousel {
-      width: 100%;
-      overflow: hidden;
-      margin-top: 40px;
-    }
-    .carousel-track {
-      display: flex;
-      width: calc(300px * 10 + 10px * 9); /* 10 изображений + отступы */
-      animation: scroll 40s linear infinite;
-    }
-    .carousel-track img {
-      width: 300px;
-      height: auto;
-      margin-right: 10px;
-      border-radius: 10px;
-    }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-    }
-  </style>
-  <link rel="stylesheet" href="theme.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оксана Азарова — художник, живопись и вышивка</title>
+  <meta name="description" content="Официальный сайт художницы Оксаны Азаровой: живопись, вышивка, выставки, пленэры и оригинальные работы.">
+  <link rel="canonical" href="https://azarovapictur.ru/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Оксана Азарова — художник">
+  <meta property="og:description" content="Живопись, вышивка, выставки и путевые заметки художницы.">
+  <meta property="og:url" content="https://azarovapictur.ru/">
+  <meta property="og:image" content="https://azarovapictur.ru/assets/images/featured-3.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="logo.webp" type="image/webp">
+  <link rel="stylesheet" href="theme.css?v=3">
+  <script defer src="site.js?v=3"></script>
 </head>
 <body>
-
-  <header>
-    <img src="logo.webp" alt="Логотип" class="logo">
-    <h1>Оксана Азарова</h1>
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <img src="logo.webp" width="54" height="54" alt="">
+        <span>Оксана Азарова<small>Художник</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="index.html" aria-current="page">Главная</a>
+        <a href="about.html">О художнике</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="internet.html">Работы в продаже</a>
+        <a href="news.html">Новости</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </div>
   </header>
 
-  <nav class="horizontal">
-    <ul>
-      <li><a href="internet.html">Интернет-магазин</a></li>
-      <li><a href="about.html">о художнике</a></li>
-      <li><a href="gallery.html">Галерея работ</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <aside class="vertical-menu">
-      <ul>
-        <li><a href="contact.html">Контакты</a></li>
-        <li><a href="news.html">Новости</a></li>
-      </ul>
-    </aside>
-
-    <main class="content">
-      <section class="about">
-        <img src="my.jpg" alt="Мое фото" class="profile-photo">
-        <h2>Добро пожаловать!</h2>
-        <p>
-          Пресс‑релиз<br><br>
-          Художница Оксана Азарова, выпускница знаменитого МГХПА им. С.Г. Строганова факультета дпо, продолжает удивлять мир искусства своим уникальным подходом, объединяющим классические традиции с современными экспериментами.<br><br>
-          Окончив обучение в МГХПА им. С.Г. Строганова, Оксана получила прочную базу в классическом изобразительном искусстве, что позволило ей развить индивидуальный стиль и осваивать новые творческие горизонты. Сегодня она уверенно работает в различных техниках – от классической живописи до смешанных техник, используя экспериментальные методы, которые раскрывают глубину и многогранность её видения.<br><br>
-          В её работах ощущается живость и динамика, каждая картина становится диалогом между традиционными приемами и современными формами самовыражения. Благодаря богатому образованию и стремлению к постоянному развитию, творчество Оксаны Азаровой выделяется своей экспрессивностью, гармонией цвета и композиции, а также способностью затрагивать самые актуальные темы современности.<br><br>
-          Художница активно участвует в выставках, где её работы получают высокую оценку ценителей искусства. Её творческий путь – это постоянное стремление к эксперименту и поиску новых решений, что делает её вклад в современное искусство особенно значимым.<br><br>
-          Каждая выставка станет уникальной площадкой для диалога между традиционными художественными формами и новаторскими подходами, позволяющими раскрыть многогранность творчества художницы.
-        </p>
-      </section>
-
-      <!-- Лента меняющихся фото -->
-      <div class="carousel">
-        <div class="carousel-track">
-          <img src="vis_11.JPG" alt="Работа 1">
-          <img src="vis_9.JPG" alt="Работа 2">
-          <img src="vis_13.JPG" alt="Работа 3">
-          <img src="vis_5.JPG" alt="Работа 4">
-          <img src="vis_8.JPG" alt="Работа 5">
-
-          <!-- Дубликаты -->
-          <img src="vis_11.JPG" alt="Работа 1">
-          <img src="vis_9.JPG" alt="Работа 2">
-          <img src="vis_13.JPG" alt="Работа 3">
-          <img src="vis_5.JPG" alt="Работа 4">
-          <img src="vis_8.JPG" alt="Работа 5">
+  <main id="main-content">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Живопись · Вышивка · Смешанные техники</span>
+        <h1>Искусство, в котором традиция встречается с экспериментом</h1>
+        <p class="hero__lead">Оксана Азарова исследует цвет, свет и фактуру — от классической живописи до вышивки и смешанных техник.</p>
+        <div class="actions">
+          <a class="button" href="gallery.html">Смотреть работы</a>
+          <a class="button button--ghost" href="about.html">Познакомиться с художницей</a>
         </div>
       </div>
+      <div class="hero__image">
+        <img src="assets/images/artist.jpg" width="1800" height="1201" alt="Художница Оксана Азарова" fetchpriority="high">
+      </div>
+    </section>
 
-    </main>
-  </div>
+    <section class="section section--tinted" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Избранное</span>
+          <h2 id="featured-title">Работы и впечатления</h2>
+        </div>
+        <p>Живописные наблюдения, выставочные проекты и образы, собранные во время путешествий.</p>
+      </div>
+      <div class="art-grid">
+        <article class="art-card">
+          <img src="assets/images/featured-1.jpg" width="1012" height="1800" alt="Живописная работа Оксаны Азаровой" loading="lazy" decoding="async">
+          <div class="art-card__body"><h3>Живопись</h3><p>Цвет, движение и впечатления от окружающего мира.</p></div>
+        </article>
+        <article class="art-card">
+          <img src="assets/images/featured-3.jpg" width="1800" height="793" alt="Выставочная работа Оксаны Азаровой" loading="lazy" decoding="async">
+          <div class="art-card__body"><h3>Выставки</h3><p>Проекты, в которых работы вступают в диалог с пространством.</p></div>
+        </article>
+        <article class="art-card">
+          <img src="assets/images/featured-5.jpg" width="1012" height="1800" alt="Работа из творческой коллекции" loading="lazy" decoding="async">
+          <div class="art-card__body"><h3>Творческие поиски</h3><p>Классические техники и современные эксперименты.</p></div>
+        </article>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Художник. Все права защищены.</p>
+    <section class="section" aria-labelledby="collections-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Коллекции</span>
+          <h2 id="collections-title">Путешествия и пленэры</h2>
+        </div>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card" href="plener_kizi.html"><h3>Кижи</h3><p>Северная природа и древнее деревянное зодчество.</p></a>
+        <a class="collection-card" href="plener_pskov.html"><h3>Псков</h3><p>Крепостные стены, древние храмы и простор неба.</p></a>
+        <a class="collection-card" href="plener_uz.html"><h3>Узбекистан</h3><p>Яркий свет, орнаменты и архитектурные впечатления.</p></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>© <span data-current-year>2026</span> Оксана Азарова</p>
+      <div class="site-footer__links">
+        <a href="mailto:oazarovs@bk.ru">oazarovs@bk.ru</a>
+        <a href="contact.html">Связаться</a>
+      </div>
+    </div>
   </footer>
-
 </body>
 </html>

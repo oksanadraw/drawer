@@ -1,74 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Новости искусства</title>
-  <style>
-    body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
-    nav { background-color: #333; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 10px; }
-    nav img.logo { height: 40px; margin-right: 20px; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; gap: 10px; }
-    nav ul li a { display: block; padding: 15px 20px; color: white; text-decoration: none; }
-    nav ul li a:hover { background-color: #555; }
-    header { text-align: center; background-color: #eee; padding: 30px 0; }
-    .news-container { max-width: 900px; margin: 20px auto; padding: 20px; }
-    .news-item { background: white; margin-bottom: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .news-item h2 { margin-top: 0; }
-    .news-item .date { font-size: 0.9em; color: gray; }
-    .news-item a { color: #0077cc; text-decoration: none; }
-    .news-item a:hover { text-decoration: underline; }
-  </style>
-  <link rel="stylesheet" href="theme.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новости искусства — Оксана Азарова</title>
+  <meta name="description" content="Новости искусства, выставок и культурных событий на сайте художницы Оксаны Азаровой.">
+  <link rel="canonical" href="https://azarovapictur.ru/news">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Новости искусства">
+  <meta property="og:description" content="Выставки, музеи и культурные события.">
+  <link rel="icon" href="logo.webp" type="image/webp">
+  <link rel="stylesheet" href="theme.css?v=3">
+  <script defer src="site.js?v=3"></script>
 </head>
 <body>
-
-<nav>
-  <img src="logo.webp" alt="Логотип" class="logo">
-  <ul>
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="news.html">Новости</a></li>
-    <li><a href="contact.html">Контакты</a></li>
-  </ul>
-</nav>
-<header>
-
-  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
-    <img src="images/luvr.jpg" alt="Лувр" style="height: 60px; border-radius: 4px;">
-    <img src="images/met.jpg" alt="Метрополитен" style="height: 60px; border-radius: 4px;">
-    <img src="images/hermitage.jpg" alt="Эрмитаж" style="height: 60px; border-radius: 4px;">
-    <img src="images/tate.jpg" alt="Тейт" style="height: 60px; border-radius: 4px;">
-    <img src="images/moma.jpeg" alt="MoMA" style="height: 60px; border-radius: 4px;">
-  </div>
-</header>
-
-
-<div class="news-container" id="newsContainer">
-  <!-- Новости будут подгружены сюда -->
-</div>
-
-<script>
-  fetch('news.json')
-    .then(response => response.json())
-    .then(data => {
-      const container = document.getElementById('newsContainer');
-      data.forEach(news => {
-        const div = document.createElement('div');
-        div.className = 'news-item';
-        div.innerHTML = `
-          <p class="date">${news.date}</p>
-          <h2>${news.title}</h2>
-          <p>${news.description}</p>
-          <a href="${news.link}" target="_blank">Читать далее</a>
-        `;
-        container.appendChild(div);
-      });
-    })
-    .catch(error => {
-      document.getElementById('newsContainer').innerHTML = '<p>Не удалось загрузить новости.</p>';
-      console.error(error);
-    });
-</script>
-
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <header class="site-header"><div class="site-header__inner"><a class="brand" href="index.html"><img src="logo.webp" width="54" height="54" alt=""><span>Оксана Азарова<small>Художник</small></span></a><nav class="site-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="about.html">О художнике</a><a href="gallery.html">Галерея</a><a href="internet.html">Работы в продаже</a><a href="news.html" aria-current="page">Новости</a><a href="contact.html">Контакты</a></nav></div></header>
+  <main id="main-content">
+    <header class="page-hero"><span class="eyebrow">Новости</span><h1>Искусство и выставки</h1><p>Подборка материалов о музеях, выставках и культурных событиях.</p></header>
+    <section class="section section--compact"><div class="news-list" data-news-list><p class="empty-state">Загрузка новостей…</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p>© <span data-current-year>2026</span> Оксана Азарова</p><div class="site-footer__links"><a href="mailto:oazarovs@bk.ru">oazarovs@bk.ru</a><a href="contact.html">Связаться</a></div></div></footer>
 </body>
 </html>
