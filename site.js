@@ -17,7 +17,7 @@ document.head.appendChild(analyticsScript);
 
 const newsContainer = document.querySelector("[data-news-list]");
 if (newsContainer) {
-  fetch("news.json")
+  fetch("news.json", { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error("Не удалось загрузить новости");
       return response.json();

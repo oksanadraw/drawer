@@ -1,0 +1,35 @@
+name: Обновление новостей
+
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-art-news
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить сайт
+        uses: actions/checkout@v4
+
+      - name: Обновить подборку
+        run: python3 scripts/update_news.py
+
+      - name: Сохранить изменения
+        run: |
+          if git diff --quiet -- news.json; then
+            echo "Новых материалов нет"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git commit -m "Автоматически обновить новости искусства"
+          git push

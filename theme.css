@@ -483,6 +483,17 @@ main {
   font-size: 0.9rem;
 }
 
+.gallery-grid .video-card {
+  grid-column: 1 / -1;
+}
+
+.video-card video {
+  display: block;
+  width: 100%;
+  max-height: min(72vh, 720px);
+  background: var(--header);
+}
+
 .trip-gallery img {
   aspect-ratio: auto;
 }
