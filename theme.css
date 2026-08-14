@@ -2034,9 +2034,70 @@ p {
 @media (min-width: 901px) {
   .hero--slider {
     align-items: start;
+    min-height: 430px;
+    padding-block: 22px;
   }
 
   .hero--slider .hero__copy {
     padding-top: 28px;
+  }
+
+  .about-home {
+    margin-top: -28px;
+    grid-template-columns: 130px minmax(0, 660px);
+    gap: 32px;
+  }
+
+  .about-home__portrait img {
+    width: 130px;
+    height: 162px;
+  }
+
+  .art-slider {
+    width: 100%;
+    max-width: 760px;
+    justify-self: end;
+  }
+
+  .art-slider__viewport,
+  .art-slider__slide img {
+    min-height: 340px;
+    max-height: 340px;
+  }
+}
+
+.collection-card {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  min-height: 124px;
+  padding: 14px;
+  gap: 16px;
+  align-items: center;
+}
+
+.collection-card img {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border: 1px solid #d6d6d6;
+}
+
+.collection-card h2,
+.collection-card p {
+  margin-top: 0;
+}
+
+.collection-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 620px) {
+  .collection-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+
+  .collection-card img {
+    width: 76px;
+    height: 76px;
   }
 }
