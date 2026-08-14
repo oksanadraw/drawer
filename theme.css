@@ -2029,3 +2029,14 @@ p {
     padding-block: 6px 8px;
   }
 }
+
+/* Raise the introductory copy toward the top edge of the featured artwork. */
+@media (min-width: 901px) {
+  .hero--slider {
+    align-items: start;
+  }
+
+  .hero--slider .hero__copy {
+    padding-top: 28px;
+  }
+}
