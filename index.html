@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Оксана Азарова — художник, живопись и вышивка</title>
-  <meta name="description" content="Официальный сайт художницы Оксаны Азаровой: живопись, вышивка, выставки, пленэры и оригинальные работы.">
+  <meta name="description" content="Официальный сайт художника Оксаны Азаровой: живопись, вышивка, выставки, пленэры и оригинальные работы.">
   <link rel="canonical" href="https://azarovapictur.ru/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Оксана Азарова — художник">
-  <meta property="og:description" content="Живопись, вышивка, выставки и путевые заметки художницы.">
+  <meta property="og:description" content="Живопись, вышивка, выставки и путевые заметки художника.">
   <meta property="og:url" content="https://azarovapictur.ru/">
   <meta property="og:image" content="https://azarovapictur.ru/assets/photo-2/featured/01.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -28,7 +28,7 @@
         "@type": "Person",
         "@id": "https://azarovapictur.ru/#artist",
         "name": "Оксана Азарова",
-        "url": "https://azarovapictur.ru/about",
+        "url": "https://azarovapictur.ru/#about",
         "image": "https://azarovapictur.ru/assets/images/artist.jpg",
         "jobTitle": "Художник",
         "knowsAbout": ["живопись", "вышивка", "пленэр", "изобразительное искусство"]
@@ -37,8 +37,8 @@
   }
   </script>
   <link rel="icon" href="logo.webp" type="image/webp">
-  <link rel="stylesheet" href="theme.css?v=4">
-  <script defer src="site.js?v=3"></script>
+  <link rel="stylesheet" href="theme.css?v=22">
+  <script defer src="site.js?v=4"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Перейти к содержанию</a>
@@ -50,8 +50,9 @@
       </a>
       <nav class="site-nav" aria-label="Основная навигация">
         <a href="index.html" aria-current="page">Главная</a>
-        <a href="about.html">О художнике</a>
+        <a href="#about">О художнике</a>
         <a href="gallery.html">Галерея</a>
+        <a href="plenairs.html">Пленэры</a>
         <a href="internet.html">Работы в продаже</a>
         <a href="news.html">Новости</a>
         <a href="contact.html">Контакты</a>
@@ -60,71 +61,56 @@
   </header>
 
   <main id="main-content">
-    <section class="hero">
-      <div>
+    <section class="hero hero--slider" aria-labelledby="hero-title">
+      <div class="hero__copy">
         <span class="eyebrow">Живопись · Вышивка · Смешанные техники</span>
-        <h1>Искусство, в котором традиция встречается с экспериментом</h1>
-        <p class="hero__lead">Оксана Азарова исследует цвет, свет и фактуру — от классической живописи до вышивки и смешанных техник.</p>
+        <h1 id="hero-title">Оксана Азарова</h1>
+        <p class="hero__lead">Авторская живопись, художественные проекты и впечатления из путешествий и пленэров.</p>
         <div class="actions">
-          <a class="button" href="gallery.html">Смотреть работы</a>
-          <a class="button button--ghost" href="about.html">Познакомиться с художницей</a>
+          <a class="button" href="gallery.html">Смотреть все работы</a>
+          <a class="button button--ghost" href="#about">О художнике</a>
         </div>
       </div>
-      <div class="hero__image">
-        <img src="assets/images/artist.jpg" width="1800" height="1201" alt="Художница Оксана Азарова" fetchpriority="high">
+      <div class="art-slider" data-art-slider aria-label="Избранные работы Оксаны Азаровой">
+        <div class="art-slider__viewport">
+          <figure class="art-slider__slide is-active" data-slide>
+            <img src="assets/photo-2/featured/01.jpg" width="1600" height="1200" alt="Живописная работа Оксаны Азаровой с цаплей и лягушкой" fetchpriority="high">
+            <figcaption>Вода — жизнь</figcaption>
+          </figure>
+          <figure class="art-slider__slide" data-slide>
+            <img src="assets/photo-2/featured/02.jpg" width="1066" height="1600" alt="Картина Оксаны Азаровой «Яркий букет»" loading="lazy">
+            <figcaption>Яркий букет, масло, 2018</figcaption>
+          </figure>
+          <figure class="art-slider__slide" data-slide>
+            <img src="assets/photo-2/featured/04.jpg" width="1312" height="1600" alt="Картина Оксаны Азаровой «Букет»" loading="lazy">
+            <figcaption>Букет, масло, 2018</figcaption>
+          </figure>
+        </div>
+        <div class="art-slider__controls">
+          <button type="button" class="art-slider__arrow" data-slider-prev aria-label="Предыдущая работа">←</button>
+          <div class="art-slider__dots" aria-label="Выбор работы">
+            <button type="button" class="is-active" data-slider-dot="0" aria-label="Показать работу 1" aria-current="true"></button>
+            <button type="button" data-slider-dot="1" aria-label="Показать работу 2"></button>
+            <button type="button" data-slider-dot="2" aria-label="Показать работу 3"></button>
+          </div>
+          <button type="button" class="art-slider__arrow" data-slider-next aria-label="Следующая работа">→</button>
+        </div>
       </div>
     </section>
 
-    <section class="section section--tinted" aria-labelledby="featured-title">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">Избранное</span>
-          <h2 id="featured-title">Работы и впечатления</h2>
-        </div>
-        <p>Пять работ из расширенной авторской подборки. Полная коллекция теперь включает 43 произведения.</p>
-      </div>
-      <div class="art-grid">
-        <article class="art-card">
-          <img src="assets/photo-2/featured/01.jpg" width="1600" height="1200" alt="Избранная работа Оксаны Азаровой — 1" loading="lazy" decoding="async">
-          <div class="art-card__body"><h3>Избранная работа · 1</h3><p>Работа из личной подборки художницы.</p></div>
-        </article>
-        <article class="art-card">
-          <img src="assets/photo-2/featured/02.jpg" width="1066" height="1600" alt="Избранная работа Оксаны Азаровой — 2" loading="lazy" decoding="async">
-          <div class="art-card__body"><h3>Избранная работа · 2</h3><p>Работа из личной подборки художницы.</p></div>
-        </article>
-        <article class="art-card">
-          <img src="assets/photo-2/featured/03.jpg" width="900" height="1600" alt="Избранная работа Оксаны Азаровой — 3" loading="lazy" decoding="async">
-          <div class="art-card__body"><h3>Избранная работа · 3</h3><p>Работа из личной подборки художницы.</p></div>
-        </article>
-        <article class="art-card">
-          <img src="assets/photo-2/featured/04.jpg" width="1312" height="1600" alt="Избранная работа Оксаны Азаровой — 4" loading="lazy" decoding="async">
-          <div class="art-card__body"><h3>Избранная работа · 4</h3><p>Работа из личной подборки художницы.</p></div>
-        </article>
-        <article class="art-card">
-          <img src="assets/photo-2/featured/05.jpg" width="1600" height="1195" alt="Избранная работа Оксаны Азаровой — 5" loading="lazy" decoding="async">
-          <div class="art-card__body"><h3>Избранная работа · 5</h3><p>Работа из личной подборки художницы.</p></div>
-        </article>
+    <section class="section about-home" id="about" aria-labelledby="about-home-title">
+      <figure class="about-home__portrait">
+        <img src="assets/photo-2/artist/01.jpg" width="900" height="1600" alt="Оксана Азарова, художник" loading="lazy" decoding="async">
+      </figure>
+      <div class="about-home__copy">
+        <span class="eyebrow">О художнике</span>
+        <h2 id="about-home-title">Оксана Азарова</h2>
+        <p>Окончила Московскую художественно-промышленную академию имени С. Г. Строганова. Участник Творческого союза художников России.</p>
+        <p>В работе соединяет классическую живопись, вышивку и смешанные техники. Участвует в персональных и коллективных выставках.</p>
+        <div class="actions"><a class="button" href="gallery.html">Смотреть работы</a><a class="button button--ghost" href="plenairs.html">Пленэры</a></div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="collections-title">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">Коллекции</span>
-          <h2 id="collections-title">Путешествия и пленэры</h2>
-        </div>
-      </div>
-      <div class="collection-grid">
-        <a class="collection-card" href="plener_kizi.html"><h3>Кижи</h3><p>Северная природа и древнее деревянное зодчество.</p></a>
-        <a class="collection-card" href="plener_pskov.html"><h3>Псков</h3><p>Крепостные стены, древние храмы и простор неба.</p></a>
-        <a class="collection-card" href="plener_uz.html"><h3>Узбекистан</h3><p>Яркий свет, орнаменты и архитектурные впечатления.</p></a>
-        <a class="collection-card" href="piter.html"><h3>Санкт-Петербург</h3><p>Городские виды, вода и архитектурные ритмы.</p></a>
-        <a class="collection-card" href="vyborg.html"><h3>Выборг</h3><p>Камерная подборка впечатлений от старого города.</p></a>
-        <a class="collection-card" href="ples.html"><h3>Плёс</h3><p>Волжские пейзажи и тихая атмосфера исторического города.</p></a>
-        <a class="collection-card" href="kislovodsk.html"><h3>Кисловодск</h3><p>Южный свет, горный воздух и пленэрные наблюдения.</p></a>
-        <a class="collection-card" href="vyshny_volochek.html"><h3>Гидроузлы</h3><p>Индустриальный пейзаж и исторические водные сооружения.</p></a>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
