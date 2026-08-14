@@ -853,6 +853,12 @@ textarea {
   }
 }
 
+/* Show every featured artwork in full instead of cropping its edges. */
+.art-slider__slide img {
+  object-fit: contain;
+  background: #fff;
+}
+
 /* News page: compact editorial typography. */
 .news-page .page-hero h1 {
   font-size: clamp(1.65rem, 2.4vw, 2.25rem);
